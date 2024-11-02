@@ -91,9 +91,9 @@ public class UserPreferenceController {
 
     /**
      * Given a discord member ID return that user's budget.
-     * 
-     * If no budget has been set, returns null.
-     * 
+     *
+     * <p>If no budget has been set, returns null.
+     *
      * @param discordMemberId the user to get the budget for
      * @return the user's budget or null if unset
      */
@@ -114,7 +114,7 @@ public class UserPreferenceController {
 
     /**
      * Given a discord member ID set that user's budget
-     * 
+     *
      * @param discordMemberId the user to set the budget for
      * @param maximumBudget the user's budget; must be greater than or equal to 0
      */
