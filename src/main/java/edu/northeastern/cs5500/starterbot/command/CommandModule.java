@@ -25,6 +25,13 @@ public class CommandModule {
 
     @Provides
     @IntoMap
+    @StringKey(BudgetCommand.NAME)
+    public SlashCommandHandler provideBudgetCommand(BudgetCommand budgetCommand) {
+        return budgetCommand;
+    }
+
+    @Provides
+    @IntoMap
     @StringKey(FailureCommand.NAME)
     public SlashCommandHandler provideFailureCommand(FailureCommand failureCommand) {
         return failureCommand;
