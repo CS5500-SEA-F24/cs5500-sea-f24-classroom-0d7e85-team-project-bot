@@ -20,14 +20,6 @@ public class UserPreferenceController {
     @Inject
     UserPreferenceController(GenericRepository<UserPreference> userPreferenceRepository) {
         this.userPreferenceRepository = userPreferenceRepository;
-
-        if (userPreferenceRepository.count() == 0) {
-            UserPreference userPreference = new UserPreference();
-            userPreference.setDiscordUserId("1234");
-            userPreference.setPreferredName("Alex");
-            userPreferenceRepository.add(userPreference);
-        }
-
         openTelemetry = new FakeOpenTelemetryService();
     }
 
