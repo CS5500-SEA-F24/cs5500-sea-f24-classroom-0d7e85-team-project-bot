@@ -46,7 +46,14 @@ public class MongoDBService implements Service {
                         .build();
 
         MongoClient mongoClient = MongoClients.create(mongoClientSettings);
-        mongoDatabase = mongoClient.getDatabase(connectionString.getDatabase());
+
+        String databaseName = connectionString.getDatabase();
+
+        if (databaseName == null || databaseName.equals("")) {
+            ProcessBuilder processBuilder = new ProcessBuilder();
+            databaseName = processBuilder.environment().get("MONGODB_DATABASE_NAME");
+        }
+        mongoDatabase = mongoClient.getDatabase(databaseName);
     }
 
     @Override
