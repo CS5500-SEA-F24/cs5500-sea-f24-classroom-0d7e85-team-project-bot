@@ -136,3 +136,5 @@
 
 **/bin
 fly.toml
+
+!zagent/honey-javaagent.jar
