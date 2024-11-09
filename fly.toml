@@ -1,6 +1,6 @@
-# fly.toml file generated for cs5500-s23-starterbot on 2023-04-15T03:46:52Z
+# fly.toml file generated for cs5500-f24-starterbot on 2023-04-15T03:46:52Z
 
-app = "cs5500-s23-starterbot"
+app = "cs5500-f24-starterbot"
 kill_signal = "SIGINT"
 kill_timeout = 5
 primary_region = "sea"
@@ -21,7 +21,7 @@ processes = []
 [env]
   BPL_JVM_THREAD_COUNT = 50
   JAVA_TOOL_OPTIONS = "-Xss256K -XX:ReservedCodeCacheSize=64M -XX:MaxMetaspaceSize=64M -javaagent:zagent/honey-javaagent.jar"
-  OTEL_SERVICE_NAME="cs5500-s23-starterbot"
+  OTEL_SERVICE_NAME="cs5500-f24-starterbot"
   HONEYCOMB_METRICS_DATASET="production"
   OTEL_JAVAAGENT_ENABLED="true"
   OTEL_METRICS_EXPORTER="otlp"
