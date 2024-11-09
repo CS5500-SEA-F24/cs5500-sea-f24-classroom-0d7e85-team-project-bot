@@ -10,7 +10,7 @@ processes = []
   builder = "paketobuildpacks/builder-jammy-full"
 
 [build.args]
-  BP_JVM_VERSION=17
+  BP_JVM_VERSION="17"
   BP_INCLUDE_FILES="zagent/honey-javaagent.jar"
   BP_OPENTELEMETRY_ENABLED="true"
   BPE_JAVA_TOOL_OPTIONS="-Xss256K -XX:ReservedCodeCacheSize=64M -XX:MaxMetaspaceSize=64M -javaagent:zagent/honey-javaagent.jar"
@@ -19,7 +19,7 @@ processes = []
   strategy = "canary"
 
 [env]
-  BPL_JVM_THREAD_COUNT = 50
+  BPL_JVM_THREAD_COUNT = "50"
   JAVA_TOOL_OPTIONS = "-Xss256K -XX:ReservedCodeCacheSize=64M -XX:MaxMetaspaceSize=64M -javaagent:zagent/honey-javaagent.jar"
   OTEL_SERVICE_NAME="cs5500-f24-starterbot"
   HONEYCOMB_METRICS_DATASET="production"
